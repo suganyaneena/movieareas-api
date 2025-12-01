@@ -1,4 +1,6 @@
 import express from "express";
+import movieRoutes from "./routes/movies.routes.js";
+
 const app = express()
 const POST  = 6969;
 
@@ -8,26 +10,9 @@ app.get('/', (req,res) => {
 })
 
 // CRUD functionality of movies
+// CLIENT -> MIDDLEWARE -> SERVER
 
-// R - For Reading
-app.get('/movies', () => {
-
-})
-
-// C - For Creating movies
-app.get('/movies', () => {
-
-})
-
-// U - For Updating movies
-app.get('/movies/:id', () => {
-
-})
-
-// D - For Deleting movies
-app.get('/movies/:id', () => {
-
-})
+app.use('/movies', movieRoutes);
 
 
 app.listen(6969, () => {
