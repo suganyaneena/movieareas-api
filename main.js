@@ -1,8 +1,12 @@
 import express from "express";
 import movieRoutes from "./routes/movies.routes.js";
+import connectDB from "./lip/db.js";
 
 const app = express()
 const POST  = 6969;
+
+//Connect DB
+connectDB();
 
 
 app.get('/', (req,res) => {
