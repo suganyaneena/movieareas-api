@@ -1,17 +1,21 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import movieRoutes from "./routes/movies.routes.js";
 import connectDB from "./lip/db.js";
 
 const app = express()
 const POST  = 6969;
 
+// Data understanding middleare
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
+
 //Connect DB
 connectDB();
 
 
-app.get('/', (req,res) => {
-    res.json({msg: "Hello students"})
-})
+// app.get('/', (req,res) => {
+//     res.json({msg: "Hello students"})
+// })
 
 // CRUD functionality of movies
 // CLIENT -> MIDDLEWARE -> SERVER
