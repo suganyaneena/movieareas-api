@@ -2,8 +2,18 @@ import { Schema, model } from "mongoose";
 
 // Write the schema
 const MovieSchema = new Schema({
-    title: String,
-    desc: String
+    title: 
+    {
+        type : String,
+        required : true,
+        unique: true
+    },
+    desc: 
+    {
+        type : String,
+        required : true,
+        unique: true
+    },
 })
 
 // Create your model
