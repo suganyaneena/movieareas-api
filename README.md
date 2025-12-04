@@ -17,6 +17,3 @@ Provide a movie api for reactjs app.
 1. SQL - (MySQL, MariaDB, PostgreSQL)
 2. NoSQL - (MongoDB, )
 
-suganya
-suganya@123
-

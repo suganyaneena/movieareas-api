@@ -12,13 +12,13 @@ const router = express.Router();
 router.get('/', MovieIndex)
 
 // C - For Creating movies
-router.get('/', MovieCreate)
+router.post('/', MovieCreate)
 
 // U - For Updating movies
-router.get('/:id', MovieUpdate)
+router.put('/:id', MovieUpdate)
 
 // D - For Deleting movies
-router.get('/:id', MovieDelete)
+router.delete('/:id', MovieDelete)
 
 // module.exports = router; // old methods
 export default router;
